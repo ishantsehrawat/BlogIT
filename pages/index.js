@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import { useState } from "react";
-import BlogForm from "../components/BlogForm";
 import Modal from "../components/Modal";
+import Blog from "../components/Blog";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -19,6 +19,7 @@ export default function Home() {
     <>
       <Navbar setOpen={handleClick} />
       {open && <Modal setClose={handleClose} />}
+      <Blog />
     </>
   );
 }
